@@ -1,0 +1,31 @@
+body{
+    background-color: black;
+}
+
+.d1
+{
+    background-color: azure;
+    border-radius: 25px;
+    padding: 5%;
+    width:65vw;
+    height:60vh;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    font-size: xx-large;
+}
+
+#operation
+{
+    border: 5px black;
+    width: 12%;
+    height: fit-content;
+    font-size: large;
+}
+
+#reset
+{
+    margin-right: 0;
+    margin-bottom: 0;
+}
