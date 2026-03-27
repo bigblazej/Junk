@@ -9,8 +9,8 @@ int main()
 	string s;
 	char temp_char;
 	int temp_int, k_int = 0, m_int = -1, list_int = 0;
-	//ifstream file("dane.txt");
-	ifstream file("przyklad.txt");
+	ifstream file("dane.txt");
+	//ifstream file("przyklad.txt");
 	ofstream out_file("output.txt");
 	cout<<"Niepoprawne pesele: "<<endl;
 	while(!file.eof())
@@ -46,8 +46,26 @@ int main()
 		temp_char = s[0];
 		temp_int = temp_char - '0';
 		temp_char = s[1];
-		temp_int = (temp_char - '0') * 3;
-		// + 7*(s[2] - '0') + 9*(s[3] - '0') + (s[4] - '0') + 3*(s[5] - '0') + 7*(s[6] - '0') + 9*(s[7] - '0') + (s[8] - '0') + 3*(s[9] - 0) + (s[10] - '0')
+		temp_int = temp_int + (temp_char - '0') * 3;
+		temp_char = s[2];
+		temp_int = temp_int + (temp_char - '0') * 7;
+		temp_char = s[3];
+		temp_int = temp_int + (temp_char - '0') * 9;
+		temp_char = s[4];
+		temp_int = temp_int + (temp_char - '0');
+		temp_char = s[5];
+		temp_int = temp_int + (temp_char - '0') * 3;
+		temp_char = s[6];
+		temp_int = temp_int + (temp_char - '0') * 7;
+		temp_char = s[7];
+		temp_int = temp_int + (temp_char - '0') * 9;
+		temp_char = s[8];
+		temp_int = temp_int + (temp_char - '0');
+		temp_char = s[9];
+		temp_int = temp_int + (temp_char - '0') * 3;
+		temp_char = s[10];
+		temp_int = temp_int + (temp_char - '0');
+		
 		if(temp_int%10 != 0)
 		{
 			cout<<s<<endl;
